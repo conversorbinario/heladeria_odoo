@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="prox_heladeria.list">
+      <field name="name">prox_heladeria list</field>
+      <field name="model">prox_heladeria.prox_heladeria</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="prox_heladeria.action_window">
+      <field name="name">prox_heladeria window</field>
+      <field name="res_model">prox_heladeria.prox_heladeria</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="prox_heladeria.action_server">
+      <field name="name">prox_heladeria server</field>
+      <field name="model_id" ref="model_prox_heladeria_prox_heladeria"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="prox_heladeria" id="prox_heladeria.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="prox_heladeria.menu_1" parent="prox_heladeria.menu_root"/>
+    <menuitem name="Menu 2" id="prox_heladeria.menu_2" parent="prox_heladeria.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="prox_heladeria.menu_1_list" parent="prox_heladeria.menu_1"
+              action="prox_heladeria.action_window"/>
+    <menuitem name="Server to list" id="prox_heladeria" parent="prox_heladeria.menu_2"
+              action="prox_heladeria.action_server"/>
+    -->
+  </data>
+</odoo>
