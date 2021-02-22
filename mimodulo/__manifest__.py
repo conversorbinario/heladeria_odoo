@@ -3,15 +3,15 @@
     'name': "mimodulo",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+              This modules provides functionalities to manage ice cream recipes in the context of an ice cream shop
+""",
 
     'description': """
-        Long description of module's purpose
+    This module is intended for the world of cuisine, namely, for ice cream shops. Its aim is to allow the user to manage all their own recipes, establishing -among other things- the creator of the recipe, modify those recipes that were previously created, their state of developement and, of course, the recipe itself with its steps.
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Manuel Gonzalez",
+    'website': "https://github.com/conversorbinario",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml
