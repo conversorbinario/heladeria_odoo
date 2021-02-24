@@ -16,7 +16,7 @@ class helados_receta(models.Model):
         'State', default="desarrollo")
     temperatura_celsius=fields.Float("Temperatura Conservación", required=True)
     receta = fields.Text("Receta", required=True)
-    autor_id = fields.Many2one('helados.repostero', string='Autor')
+    autor_id = fields.Many2one('helados.repostero', String='Autor')
 
 #     @api.depends('value')
 #     def _value_pc(self):
@@ -44,7 +44,7 @@ class Gelato(models.Model):
 
 class Sorbete(models.Model):
     
-    _name = 'helados.receta'
+    _inherit = 'helados.receta'
     porcentaje_agua = fields.Integer()
 
     @api.constrains('porcentaje_agua')
