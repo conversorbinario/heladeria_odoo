@@ -26,7 +26,9 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/helados.xml',
-        'views/templates.xml',
+        'views/reposteros.xml',
+        'views/sorbetes.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

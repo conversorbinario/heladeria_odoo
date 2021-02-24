@@ -1,0 +1,30 @@
+<odoo>
+    <record id='sorbetes_recetas_action' model='ir.actions.act_window'>
+        <field name="name">Helados</field>
+        <field name="res_model">helados.receta.sorbete</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+    <menuitem name="Sorbetes" id="heladeria_sorbetes_menu" parent="heladeria_helados_menu_op" action="sorbetes_recetas_action"/>
+
+    <record id="kanban_sorbetes" model="ir.ui.view">
+        <field name="name">helados.receta.sorbete.kanban</field>
+        <field name="model">helados.receta.sorbete</field>
+        <field name="sequence">12</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="fruta">
+                <field name="sabor" />
+                <field name="estado" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click">
+                            <field name="sabor" />
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+</odoo>
