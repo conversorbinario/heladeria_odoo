@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_mimodulo_mimodulo,mimodulo.mimodulo,model_mimodulo_mimodulo,,1,0,0,0
+access_helados_receta,access.helados.receta,model_helados_receta,,1,1,1,1
+access_helados_repostero,access.helados.repostero,model_helados_repostero,,1,1,1,1
+access_helados_receta_sorbete,access.helados.receta.sorbete,model_helados_receta_sorbete,,1,1,1,1
