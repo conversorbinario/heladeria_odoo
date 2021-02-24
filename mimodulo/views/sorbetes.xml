@@ -26,5 +26,41 @@
         </field>
     </record>
 
+    <!-- Form View -->
+    <record id="sorbetes_view_form" model="ir.ui.view">
+        <field name="name">Formulario Sorbetes</field>
+        <field name="model">helados.receta.sorbete</field>
+        <field name="arch" type="xml">
+            <form>
+                    <group>
+                        <field name="sabor"/>
+                        <field name="autor_id" widget="many2one_tags"/>
+                    </group>
+                    <group>
+                        <field name="porcentaje_agua"/>
+                        <field name="fruta"/>
+                        <field name="receta"/>
+                        <field name="data_alta"/>
+                        <field name="estado"/>
+                        <field name="temperatura_celsius"/>
+                    </group>
+                </form>
+            </field>
+        </record>
 
-</odoo>
+        <!-- Tree(list) View -->
+        <record id="library_member_view_tree" model="ir.ui.view">
+            <field name="name"> Lista sorbetes </field>
+            <field name="model">helados.receta.sorbete</field>
+            <field name="arch" type="xml">
+                <tree default_order="sabor">
+                    <field name="sabor"/>
+                    <field name="autor_id" widget="many2one_tags"/>
+                    <field name="estado"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+    </odoo>

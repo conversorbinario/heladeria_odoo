@@ -58,7 +58,10 @@ class Sorbete(models.Model):
     _name = 'helados.receta.sorbete'
     _inherit = 'helados.receta'
     porcentaje_agua = fields.Integer()
-    fruta = fields.Boolean()
+    fruta = fields.Selection(
+        [('si', 'Si'),
+        ('no', 'No')],
+        'Contiene fruta', default="no")
 
     @api.constrains('porcentaje_agua')
     def _check_porcentaje(self):
