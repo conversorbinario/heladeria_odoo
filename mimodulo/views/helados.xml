@@ -1,5 +1,15 @@
 <odoo>
-  <data>
+
+ <record id='helados_recetas_action' model='ir.actions.act_window'>
+        <field name="name">Helados</field>
+        <field name="res_model">helados.receta</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Heladeria" id="heladeria_base_menu" />
+    <menuitem name="Helados" id="heladeria_helados" parent="heladeria_base_menu" action="helados_recetas_action"/>
+
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="mimodulo.list">
@@ -56,5 +66,5 @@
     <menuitem name="Server to list" id="mimodulo" parent="mimodulo.menu_2"
               action="mimodulo.action_server"/>
     -->
-  </data>
+  
 </odoo>
