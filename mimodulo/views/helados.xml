@@ -29,6 +29,11 @@
             <field name="data_alta"/>
             <field name="estado"/>
             <field name="temperatura_celsius"/>
+            <label for="coste"/>
+            <div>
+              <field name="coste" class="oe_inline" />
+ €
+            </div>
           </group>
         </group>
       </form>
@@ -36,16 +41,16 @@
   </record>
 
   <record id="heladeria_helados_view_list" model="ir.ui.view">
-        <field name="name">Lista Helados</field>
-        <field name="model">helados.receta</field>
-        <field name="arch" type="xml">
-            <tree>
-            <field name="sabor"/>
-            <field name="autor_id" widget="many2one_tags"/>
-            <field name="estado"/>
-            </tree>
-        </field>
-    </record>
+    <field name="name">Lista Helados</field>
+    <field name="model">helados.receta</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="sabor"/>
+        <field name="autor_id" widget="many2one_tags"/>
+        <field name="estado"/>
+      </tree>
+    </field>
+  </record>
 
   <!-- actions opening views on models -->
   <!--

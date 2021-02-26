@@ -19,6 +19,9 @@ class helados_receta(models.Model):
         "Temperatura Conservación", required=True)
     receta = fields.Text("Receta", required=True)
     autor_id = fields.Many2one('helados.repostero', String='Autor')
+    coste = fields.Monetary("Coste Receta", currency_field='currency_id')
+    currency_id = fields.Many2one('res.currency', string='Currency')
+
 
 #     @api.depends('value')
 #     def _value_pc(self):
@@ -58,10 +61,10 @@ class Sorbete(models.Model):
     _name = 'helados.receta.sorbete'
     _inherit = 'helados.receta'
     porcentaje_agua = fields.Integer()
-    fruta = fields.Selection(
+    alergenos = fields.Selection(
         [('si', 'Si'),
         ('no', 'No')],
-        'Contiene fruta', default="no")
+        'Contiene alergenos conocidos', default="no")
 
     @api.constrains('porcentaje_agua')
     def _check_porcentaje(self):
