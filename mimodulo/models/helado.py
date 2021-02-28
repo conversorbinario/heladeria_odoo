@@ -19,8 +19,15 @@ class helados_receta(models.Model):
         "Temperatura Conservación", required=True)
     receta = fields.Text("Receta", required=True)
     autor_id = fields.Many2one('helados.repostero', String='Autor')
-    coste = fields.Monetary("Coste Receta", currency_field='currency_id')
+    coste = fields.Monetary("Coste Receta /litro", currency_field='currency_id', required=True)
     currency_id = fields.Many2one('res.currency', string='Currency')
+    porcentaje = fields.Integer("Porcentaje ganancia /litro")
+    precio = fields.Float(compute='_compute_precio', store=True)
+
+    @api.depends('coste', 'porcentaje')
+    def _compute_precio(self):
+        for produto in self.filtered('porcentaje'):
+            produto.precio =  produto.coste * ((100+ produto.porcentaje)/100)
 
 
 #     @api.depends('value')
@@ -56,7 +63,6 @@ class Gelato(models.Model):
             if gelato.porcentaje_leche > 15:
                 raise models.ValidationError('Demasiada base láctea')
 
-
 class Sorbete(models.Model):
     _name = 'helados.receta.sorbete'
     _inherit = 'helados.receta'
@@ -64,7 +70,7 @@ class Sorbete(models.Model):
     alergenos = fields.Selection(
         [('si', 'Si'),
         ('no', 'No')],
-        'Contiene alergenos conocidos', default="no")
+        'Contiene alérgenos conocidos', default="no")
 
     @api.constrains('porcentaje_agua')
     def _check_porcentaje(self):

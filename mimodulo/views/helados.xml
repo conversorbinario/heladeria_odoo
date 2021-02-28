@@ -34,6 +34,13 @@
               <field name="coste" class="oe_inline" />
  €
             </div>
+            <field name="porcentaje"/>
+
+             <label for="precio"/>
+            <div>
+              <field name="precio" class="oe_inline" />
+ €
+            </div>
           </group>
         </group>
       </form>
