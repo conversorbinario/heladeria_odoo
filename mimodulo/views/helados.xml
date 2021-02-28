@@ -25,7 +25,10 @@
             <field name="autor_id" widget="many2one_tags"/>
           </group>
           <group>
+                        <field name="ingredientes"/>
+
             <field name="receta"/>
+
             <field name="data_alta"/>
             <field name="estado"/>
             <field name="temperatura_celsius"/>

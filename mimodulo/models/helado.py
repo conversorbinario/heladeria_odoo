@@ -8,6 +8,7 @@ class helados_receta(models.Model):
     _name = 'helados.receta'
     _order = 'sabor desc'
 
+    ingredientes = fields.Text('Ingredientes', required=True)
     sabor = fields.Char('Sabor', required=True)
     data_alta = fields.Date('Data de alta')
     estado = fields.Selection(
@@ -19,7 +20,7 @@ class helados_receta(models.Model):
         "Temperatura Conservación", required=True)
     receta = fields.Text("Receta", required=True)
     autor_id = fields.Many2one('helados.repostero', String='Autor')
-    coste = fields.Monetary("Coste Receta /litro", currency_field='currency_id', required=True)
+    coste = fields.Monetary("Coste Receta /litro", currency_field='currency_id', required=True, default=0)
     currency_id = fields.Many2one('res.currency', string='Currency')
     porcentaje = fields.Integer("Porcentaje ganancia /litro")
     precio = fields.Float(compute='_compute_precio', store=True)
@@ -36,8 +37,8 @@ class helados_receta(models.Model):
     @api.constrains('temperatura_celsius')
     def _check_porcentaje(self):
         for helado in self:
-            if helado.temperatura_celsius > 0:
-                raise models.ValidationError('La temperatura de congelación no puede ser superior a 0')
+            if helado.temperatura_celsius > -0.001:
+                raise models.ValidationError('La temperatura de congelación debe ser inferior a 0')
 
 class helados_repostero(models.Model):
     _name = 'helados.repostero'
