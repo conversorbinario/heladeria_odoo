@@ -6,7 +6,7 @@
     <field name="name">Productos</field>
     <field name="res_model">helados.receta</field>
     <field name="view_type">form</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">tree,form,calendar</field>
   </record>
 
   <menuitem name="Heladeria" id="heladeria_base_menu" />
@@ -25,10 +25,8 @@
             <field name="autor_id" widget="many2one_tags"/>
           </group>
           <group>
-                        <field name="ingredientes"/>
-
+            <field name="ingredientes"/>
             <field name="receta"/>
-
             <field name="data_alta"/>
             <field name="estado"/>
             <field name="temperatura_celsius"/>
@@ -39,7 +37,7 @@
             </div>
             <field name="porcentaje"/>
 
-             <label for="precio"/>
+            <label for="precio"/>
             <div>
               <field name="precio" class="oe_inline" />
  €
@@ -59,6 +57,17 @@
         <field name="autor_id" widget="many2one_tags"/>
         <field name="estado"/>
       </tree>
+    </field>
+  </record>
+
+  <record id="heladeria_helados_view_calendar" model="ir.ui.view">
+    <field name="name">Calendar helados</field>
+    <field name="model">helados.receta</field>
+    <field name="arch" type="xml">
+      <calendar string="Helados" date_start="data_alta" mode="month" form_view_id="heladeria_helados_view_form">
+        <field name="sabor" />
+        <field name="autor_id" />
+      </calendar>
     </field>
   </record>
 

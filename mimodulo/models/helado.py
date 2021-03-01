@@ -10,7 +10,7 @@ class helados_receta(models.Model):
 
     ingredientes = fields.Text('Ingredientes', required=True)
     sabor = fields.Char('Sabor', required=True)
-    data_alta = fields.Date('Data de alta')
+    data_alta = fields.Date('Fecha de alta')
     estado = fields.Selection(
         [('desarrollo', 'Desarrollo'),
          ('experimental', 'Experimental'),
