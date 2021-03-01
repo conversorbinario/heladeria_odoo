@@ -38,6 +38,8 @@
         <field name="model">helados.repostero</field>
         <field name="arch" type="xml">
             <tree default_order="local">
+                            <field name="local"/>
+
                 <field name="name"/>
                 <field name="local"/>
             </tree>
