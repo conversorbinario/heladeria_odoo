@@ -1,6 +1,6 @@
 <odoo>
     <record id='sorbetes_recetas_action' model='ir.actions.act_window'>
-        <field name="name">Helados</field>
+        <field name="name">Sorbetes</field>
         <field name="res_model">helados.receta.sorbete</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form,kanban,calendar</field>

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "mimodulo",
+    'name': "Gestion Recetas Heladeria",
 
     'summary': """
               This modules provides functionalities to manage ice cream recipes in the context of an ice cream shop
