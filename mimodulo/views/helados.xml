@@ -12,7 +12,7 @@
   <menuitem name="Heladeria" id="heladeria_base_menu" />
   <menuitem name="Productos" id="heladeria_helados_menu_op" parent="heladeria_base_menu"/>
   <menuitem name="Helados" id="heladeria_helados_todos_menu" parent="heladeria_helados_menu_op" action="helados_recetas_action"/>
-  <menuitem name="icon" id="icon_id" web_icon="mimodulo,static/description/icon.png" sequence="1"/>
+
  
   <record id="heladeria_helados_view_form" model="ir.ui.view">
     <field name="name">LFormulario Helados</field>
