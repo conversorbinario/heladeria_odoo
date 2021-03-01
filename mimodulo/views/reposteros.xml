@@ -3,29 +3,29 @@
 
 <odoo>
 
- <record id='helados_reposteros_action' model='ir.actions.act_window'>
-    <field name="name">Reposteros</field>
-    <field name="res_model">helados.repostero</field>
-    <field name="view_type">form</field>
-    <field name="view_mode">tree,form</field>
-  </record>
+    <record id='helados_reposteros_action' model='ir.actions.act_window'>
+        <field name="name">Reposteros</field>
+        <field name="res_model">helados.repostero</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
-  <menuitem name="Reposteros" id="heladeria_reposteros_menu" parent="heladeria_base_menu" action="helados_reposteros_action"/>
+    <menuitem name="Reposteros" id="heladeria_reposteros_menu" parent="heladeria_base_menu" action="helados_reposteros_action"/>
 
-  <!-- Form View -->
+    <!-- Form View -->
     <record id="member_reposteros_view_form" model="ir.ui.view">
         <field name="name">Formulario Resposteros</field>
         <field name="model">helados.repostero</field>
         <field name="arch" type="xml">
-            <form>                
+            <form>
                 <group>
                     <group>
                         <field name="name"/>
 
                     </group>
-                    <group>        
-                        <field name="helados_ids" widget="one2many_tags"/>           
-                        <field name="local"/>                        
+                    <group>
+                        <field name="helados_ids" widget="one2many_tags"/>
+                        <field name="local"/>
                     </group>
                 </group>
             </form>
@@ -33,15 +33,14 @@
     </record>
 
     <!-- Tree(list) View -->
-    <record id="library_member_view_tree" model="ir.ui.view">
-        <field name="name">LLista Reposteros</field>
+    <record id="member_reposteros_view_tree" model="ir.ui.view">
+        <field name="name">Lista Reposteros</field>
         <field name="model">helados.repostero</field>
         <field name="arch" type="xml">
-            <tree default_order="local">
-                            <field name="local"/>
-
+            <tree>
                 <field name="name"/>
                 <field name="local"/>
+
             </tree>
         </field>
     </record>
