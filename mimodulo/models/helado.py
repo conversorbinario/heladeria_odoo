@@ -50,7 +50,8 @@ class helados_repostero(models.Model):
     local = fields.Char("Lugar de Trabajo", required=True)
 
 
-class Gelato(models.Model):
+## imlementar a futuro, gelato, subtipo de helado; 
+'''class Gelato(models.Model):
     _name = 'helados.receta.gelato'
     _inherit = 'helados.receta'
 
@@ -61,7 +62,7 @@ class Gelato(models.Model):
     def _check_porcentaje(self):
         for gelato in self:
             if gelato.porcentaje_leche > 15:
-                raise models.ValidationError('Demasiada base láctea')
+                raise models.ValidationError('Demasiada base láctea') '''
 
 class Sorbete(models.Model):
     _name = 'helados.receta.sorbete'
