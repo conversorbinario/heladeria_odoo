@@ -19,7 +19,8 @@ Os formularios de alta permiten indicar uns determinados campos, establecendo ce
 
 O obxectivo principal e levar unha "contabilidade" ou control da elaboración de recetas, por elo, cóllese a data de alta da receita, ou seu estado de desenvolvemento (experimental, lista para producir...) e o autor da mesma. 
 Estes campos logo utilízanse nas diferetens vistas. 
-Ademáis das vistas tipo tree e tipo form (a visualización básica), temos acceso áavistas tipo Calendar. Estas vistas dannos unha visual de cal é o ritmo de desarrollo de receitas. Por outra banda, os sorbetes conteñen moitas veces ingredientes que poden resultar alérxicos. Nunha vista tipo kanban podemos ver cales conteñen alérxenos coñecidos e cales non. 
+
+Ademáis das vistas tipo tree e tipo form (a visualización básica), temos acceso a vistas tipo Calendar. Estas vistas dannos unha visual de cal é o ritmo de desarrollo de receitas. Por outra banda, os sorbetes conteñen moitas veces ingredientes que poden resultar alérxicos. Nunha vista tipo kanban podemos ver cales conteñen alérxenos coñecidos e cales non. 
 
 ### Manexando reposteiros.
  Os resposteiros son ao autores das receitas. A información recollida sobre os mesmos é menor, en tanto que neste módulo so nos interesa saber quenes son para poder levar unha contabilidade/historial das receitas. 
