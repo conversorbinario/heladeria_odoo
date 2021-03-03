@@ -42,8 +42,7 @@ class helados_receta(models.Model):
 
 class helados_repostero(models.Model):
     _name = 'helados.repostero'
-    _inherit = 'res.partner'
-
+   
     helados_ids = fields.One2many(
         'helados.receta', 'autor_id', string='Recetas')
     name = fields.Char("Nombre y apellidos", required=True)
