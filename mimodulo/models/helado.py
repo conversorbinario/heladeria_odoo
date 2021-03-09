@@ -42,12 +42,12 @@ class helados_receta(models.Model):
 
 class helados_repostero(models.Model):
     _name = 'helados.repostero'
-   
+    _inherits = {'res.partner': 'repostero_id'}
+
+    repostero_id = fields.Many2one('res.partner', ondelete='cascade')
     helados_ids = fields.One2many(
         'helados.receta', 'autor_id', string='Recetas')
-    name = fields.Char("Nombre y apellidos", required=True)
-    partner_id = fields.Many2one('res.partner', ondelete='cascade')
-    local = fields.Char("Lugar de Trabajo", required=True)
+    local = fields.Char("Local de Trabajo", required=True)
 
 
 ## imlementar a futuro, gelato, subtipo de helado; 

@@ -20,31 +20,30 @@
             <form>
                 <group>
                     <group>
-                        <field name="name"/>
-
+                        <field name="name" string="Nome e apelidos"/>
+                        </group>
+                        <group>
+                            <field name="helados_ids" widget="one2many_tags"/>
+                            <field name="local"/>
+                        </group>
                     </group>
-                    <group>
-                        <field name="helados_ids" widget="one2many_tags"/>
-                        <field name="local"/>
-                    </group>
-                </group>
-            </form>
-        </field>
-    </record>
+                </form>
+            </field>
+        </record>
 
-    <!-- Tree(list) View -->
-    <record id="member_reposteros_view_tree" model="ir.ui.view">
-        <field name="name">Lista Reposteros</field>
-        <field name="model">helados.repostero</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="local"/>
+        <!-- Tree(list) View -->
+        <record id="member_reposteros_view_tree" model="ir.ui.view">
+            <field name="name">Lista Reposteros</field>
+            <field name="model">helados.repostero</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Nome e apelidos"/>
+                    <field name="local"/>
 
-            </tree>
-        </field>
-    </record>
+                </tree>
+            </field>
+        </record>
 
-    
 
-</odoo>
+
+    </odoo>
